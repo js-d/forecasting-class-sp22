@@ -1,65 +1,79 @@
 ---
-layout: home
-title: Just the Class
-nav_exclude: true
-seo:
-  type: Course
-  name: Just the Class
+layout: page
+title: About
+description: >-
+    Course policies and information.
 ---
 
-# {{ site.tagline }}
-{: .mb-2 }
-{{ site.description }}
-{: .fs-6 .fw-300 }
+# About
+{:.no_toc}
 
-{% if site.announcements %}
-{{ site.announcements.last }}
-[Announcements](announcements.md){: .btn .btn-outline .fs-3 }
+## Table of contents
+{: .no_toc .text-delta }
+
+1. TOC
+{:toc}
+
+---
+
+## About
+
+Forecasting has been used to predict elections, climate change, and the spread of COVID-19. Poor forecasts led to the 2008 financial crisis. In our daily lives, good forecasting ability can help us plan our work, be on time to events, and make informed career decisions. This practically-oriented class will provide you with tools to make good forecasts, including Fermi estimates, calibration training, base rates, scope sensitivity, and power laws. We'll discuss several historical instances of successful and unsuccessful forecasts, and practice making forecasts about our own lives, about current events, and about scientific progress.
+
+**Prerequisites**: Stat134 or a similar probability course (i.e. EECS126, STAT140, IEOR172).
+
+[Course Syllabus](./assets/syllabus.pdf) | [Piazza Forum](https://piazza.com/berkeley/spring2022/stat157260)
+
+## Lecture
+
+MWF11-12, in 3108 Etcheverry Hall
+ * <a href="https://berkeley.zoom.us/j/93592932586?pwd=Y1hBNEp4OGVqWHMvOXZKcmd1L0d6QT09">Zoom link</a> for first 2 weeks of class
+
+This class will be heavily disussion-based and participation will count towards the grade. Monday and Wednesday lectures 
+will be a combination of traditional lecture and group activities, while most Fridays will be student-led small 
+group discussions with instructors helping to facilitate.
+
+Instead of exams, there will be a final project. Students in Stat260 will be expected to do a more substantial project.
+
+There will be no official lab / discussion block, but some homework will involve programming. 
+
+## Office Hours
+
+Our office hour schedule this semester will be:
+ * Jacob Steinhardt (Lead Instructor): Evans 325, 11am-12pm on Tuesdays
+ * Jean-Stanislas Denain (GSI): Evans 428, 2-3pm on Mondays
+ * Frances Ding (GSI): Evans 428, 10-11am on Fridays
+ * Collin Burns (GSI): Evans 428, 10-11am on Wednesdays
+
+We will be holding some of these office hours on zoom for at least the first two week of classes. We will announce these and any other changes to the office hour schedule on piazza.
+
+## Grading
+
+Grades will be based on a combination of:
+ * Discussion Participation (15%)
+ * Forecasting Performance (20%)
+ * Homework (35%)
+ * Final project (30%)
+
+## Course Staff
+
+To reach course staff, you can email [forecasting-class-staff@lists.berkeley.edu](mailto:forecasting-class-staff@lists.berkeley.edu). If possible, please avoid emailing professors or GSIs directly!
+
+{% assign lead = site.staffers | where: 'role', 'Lead Instructor' %}
+{% for staffer in lead %}
+{{ staffer }}
+{% endfor %}
+
+{% assign instructors = site.staffers | where: 'role', 'Instructor' %}
+{% for staffer in instructors %}
+{{ staffer }}
+{% endfor %}
+
+{% assign teaching_assistants = site.staffers | where: 'role', 'GSI' %}
+{% assign num_teaching_assistants = teaching_assistants | size %}
+{% if num_teaching_assistants != 0 %}
+
+{% for staffer in teaching_assistants %}
+{{ staffer }}
+{% endfor %}
 {% endif %}
-
-## Just the Class
-
-Just the Class is a GitHub Pages template developed for the purpose of quickly deploying course websites. In addition to serving plain web pages and files, it provides a boilerplate for:
-
-- a [course calendar](calendar.md),
-- a [staff](staff.md) page,
-- and a weekly [schedule](schedule.md).
-
-Just the Class is built on top of [Just the Docs](https://github.com/pmarsceill/just-the-docs), making it easy to extend for your own special use cases while providing sane defaults for most everything else. This means that you also get:
-
-- automatic [navigation structure](https://pmarsceill.github.io/just-the-docs/docs/navigation-structure/),
-- instant, full-text [search](https://pmarsceill.github.io/just-the-docs/docs/search/) and page indexing,
-- and a small but powerful set of [UI components](https://pmarsceill.github.io/just-the-docs/docs/ui-components) and authoring [utilities](https://pmarsceill.github.io/just-the-docs/docs/utilities).
-
-## Getting Started
-
-Getting started with Just the Class is simple.
-
-1. Create a [new repository based on Just the Class](https://github.com/kevinlin1/just-the-class/generate).
-1. Update `_config.yml` and `index.md` with your course information.
-1. Configure a [publishing source for GitHub Pages](https://help.github.com/en/articles/configuring-a-publishing-source-for-github-pages). Your course website is now live!
-1. Edit and create `.md` [Markdown files](https://guides.github.com/features/mastering-markdown/) to add your content.
-
-Just the Class has been used by instructors at Stanford University ([CS 161](https://stanford-cs161.github.io/winter2021/)), UC Berkeley ([Data 100](https://ds100.org/fa21/)), UC Santa Barbara ([DS1](https://ucsb-ds.github.io/ds1-f20/)), Northeastern University ([CS4530/5500](https://neu-se.github.io/CS4530-CS5500-Spring-2021/)), and Carnegie Mellon University ([17-450/17-950](https://cmu-crafting-software.github.io/)). For a few open-source examples, see the following course websites and their source code.
-
-- [CSE 390HA](https://courses.cs.washington.edu/courses/cse390ha/20au/) ([source code](https://gitlab.cs.washington.edu/cse390ha/20au/website)) is an example of a single-page website that centers modules.
-- [CSE 143](https://courses.cs.washington.edu/courses/cse143/20au/) ([source code](https://gitlab.cs.washington.edu/cse143/20au/website)) hosts an entire online textbook with full-text search.
-- [CSE 373](https://courses.cs.washington.edu/courses/cse373/21su/) ([source code](https://gitlab.cs.washington.edu/cse373-root/21su/website)) is an example of a simple website combining Markdown pages with generated HTML files.
-
-Share your course website and find more examples in the [show and tell discussion](https://github.com/kevinlin1/just-the-class/discussions/categories/show-and-tell)!
-
-Continue reading to learn how to setup a development environment on your local computer. This allows you to make incremental changes without directly modifying the live website.
-
-### Local development environment
-
-Just the Class is built for [Jekyll](https://jekyllrb.com), a static site generator. View the [quick start guide](https://jekyllrb.com/docs/) for more information. Just the Docs requires no special Jekyll plugins and can run on GitHub Pages' standard Jekyll compiler.
-
-1. Follow the GitHub documentation for [Setting up your GitHub Pages site locally with Jekyll](https://help.github.com/en/articles/setting-up-your-github-pages-site-locally-with-jekyll).
-1. Start your local Jekyll server.
-```bash
-$ bundle exec jekyll serve
-```
-1. Point your web browser to [http://localhost:4000](http://localhost:4000)
-1. Reload your web browser after making a change to preview its effect.
-
-For more information, refer to [Just the Docs](https://pmarsceill.github.io/just-the-docs/).

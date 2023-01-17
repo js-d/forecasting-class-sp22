@@ -1,23 +1,15 @@
 ---
-title: Basic Data Structures
+title: Week 2
 ---
 
-Oct 5
-: [Linked Lists & Encapsulation](#)
-  : [3.1](#), [2.2](#), [2.3](#)
+Jan 24
+: Lecture 3: Scoring Rules 
+    : [Notes](/lectures/lec3-scoring-rules) / [HW2](/assets/hw2.pdf) (due 01/31)
 
-Oct 6
-: **Section**{: .label .label-purple }[Linked Lists](#)
-  : [Solution](#)
+Jan 26
+: Lecture 4: Estimation
+    : [Notes](/lectures/lec4-estimation)   
 
-Oct 7
-: [Resizing Arrays](#)
-  : [2.4](#), [2.5](#)
-
-Oct 8
-: **Lab**{: .label .label-purple } [Resizing Arrays](#)
-
-Oct 9
-: [Runtime Analysis](#)
-  : [8.1](#), [8.2](#), [8.3](#), [8.4](#)
-: **HW 2 due**{: .label .label-red }
+Jan 28
+: Discussion 2: Estimation
+    :  [Discussion Worksheet](https://docs.google.com/document/d/1qAi5OVGwhKOt7-EP0IYcSW5B8bW9fhiohmzgmSESqpQ/edit?usp=sharing)
